@@ -1,0 +1,42 @@
+<div
+  id="main-wrapper"
+  [ngClass]="{ 'show-sidebar': showMobileMenu }"
+  dir="ltr"
+  data-theme="light"
+  data-layout="vertical"
+  [attr.data-sidebartype]="sidebartype"
+  data-sidebar-position="absolute"
+  data-header-position="absolute"
+  data-boxed-layout="full"
+>
+  <header class="topbar" data-navbarbg="skin1">
+    <nav class="d-flex top-navbar navbar-expand-lg navbar-dark">
+      <div
+        class="navbar-collapse collapse"
+        id="navbarSupportedContent"
+        data-navbarbg="skin1"
+        [ngbCollapse]="!isCollapsed"
+      >
+        <app-navigation
+          (toggleSidebar)="toggleSidebarType()"
+          class="w-100"
+        ></app-navigation>
+      </div>
+    </nav>
+  </header>
+  <aside
+    class="left-sidebar"
+    data-sidebarbg="skin6"
+    (mouseover)="Logo()"
+    (mouseout)="Logo()"
+  >
+      <app-sidebar></app-sidebar>
+  </aside>
+  <div class="page-wrapper">
+    <div class="container-fluid">
+      <router-outlet></router-outlet>
+    </div>
+    <footer class="footer text-center">
+    </footer>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+{
+  "/proxy": {
+    "target": "http://localhost:5564",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/proxy": ""
+    }
+  }
+}

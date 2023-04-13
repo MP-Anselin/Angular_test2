@@ -1,0 +1,48 @@
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-6 col-md-8">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title">Registration</h4>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+            <div class="mb-3">
+              <label for="firstName" class="form-label">firstname</label>
+              <input type="text" class="form-control" id="firstName" formControlName="firstName" placeholder="Enter firstname">
+            </div>
+            <div class="mb-3">
+              <label for="lastName" class="form-label">lastname</label>
+              <input type="text" class="form-control" id="lastName" formControlName="lastName" placeholder="Enter lastname">
+            </div>
+            <div class="mb-3">
+              <label for="username" class="form-label">Username</label>
+              <input type="text" class="form-control" id="username" formControlName="username" placeholder="Enter username">
+            </div>
+            <div class="mb-3">
+              <label for="userRole" class="form-label">Your role</label>
+              <input type="text" class="form-control" id="userRole" formControlName="userRole" placeholder="Enter your role">
+            </div>
+            <div class="mb-3">
+              <label for="email">Email address</label>
+              <input type="email" class="form-control" id="email" formControlName="email" placeholder="Enter email address">
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" class="form-control" id="password" formControlName="password" placeholder="Enter password">
+            </div>
+            <div class="mb-3">
+              <label for="confirmPassword">Confirm Password</label>
+              <input type="password" class="form-control" id="confirmPassword" name="confirmPassword"
+                     placeholder="Enter password">
+            </div>
+            <div class="button-group">
+              <button type="submit" class="btn btn-success">registration</button>
+              <a class="btn btn-info" (click)="redirectToLogin()" >Login myself</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
